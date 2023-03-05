@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddNote = (handdleAddNote) => {
+const AddNote = ({handdleAddNote}) => {
     const [noteText, setNoteText] = useState("")
 
     const handleChange = (event) =>{
@@ -8,7 +8,7 @@ const AddNote = (handdleAddNote) => {
     }
 
     const handleSaveClick = () =>{
-        handdleAddNote(text)
+        handdleAddNote(noteText)
     }
 
     return (<div className="note new">
