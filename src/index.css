@@ -61,6 +61,18 @@ textarea:focus{
   background-color: rgba(255, 254, 254, 0.671);
 }
 
+.toggle{
+  background-color: rgba(204, 204, 204, 0.437);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  transition: background-color 0.5s;
+}
+
+.toggle:hover{
+  background-color: rgba(204, 204, 204, 0.700);
+}
+
 .note{
   background-color: rgb(150, 228, 150);
 
@@ -99,6 +111,20 @@ textarea:focus{
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode{
+  background-color: rgba(0, 0, 0, 0.903);
+}
+
+.dark-mode h1{
+  color: rgba(255, 255, 255, 0.804);
 }
 
 .notes-list{
