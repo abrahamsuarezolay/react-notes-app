@@ -105,6 +105,10 @@ textarea:focus{
   justify-content: space-between;
 }
 
+body{
+  background-color: rgba(98, 255, 155, 0.397);
+}
+
 .container{
   max-width: 960px;
   margin-right: auto;
@@ -121,7 +125,7 @@ textarea:focus{
 }
 
 .dark-mode{
-  background-color: rgba(0, 0, 0, 0.903);
+  background-color: rgba(0, 0, 0, 0.966);
 }
 
 .dark-mode h1{

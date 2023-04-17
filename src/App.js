@@ -6,6 +6,7 @@ import Header from "./components/Header";
 
 
 const App = () => {
+  
   const [notes, setNotes] = useState([{
     id: nanoid(),
     text: "This is my first note!",
@@ -23,12 +24,15 @@ const App = () => {
   }
 ]); 
 
+
 const [searchText, setSearchText] = useState("");
 
 const [darkMode, setDarkMode] = useState(false);
 
 useEffect(()=>{
   const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+
+  console.log(savedNotes);
 
   if(savedNotes){
     setNotes(savedNotes);
@@ -38,6 +42,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   localStorage.setItem("react-notes-app-data", JSON.stringify(notes))
+
 }, [notes]);
 
 
@@ -49,10 +54,11 @@ const addNote = (text) => {
     date: date.toLocaleDateString()
   }
 
+  
   const newNotes = [...notes, newNote];
   setNotes(newNotes);
-
 }
+
 
 const deleteNote = (id) => {
   const newNotes = notes.filter((note)=> note.id !== id);
@@ -65,7 +71,7 @@ const deleteNote = (id) => {
         <Header handleToggleDarkMode={setDarkMode} />
         <Search handleSearchNote={setSearchText} />
         <NoteList
-          notes={notes.filter((note) => note.text.toLowerCase().includes(searchText))}
+          notes={notes.filter((note) => note.text.toLowerCase().includes(searchText.toLowerCase()))}
           handleAddNote={addNote}
           handleDeleteNote={deleteNote}
         />
