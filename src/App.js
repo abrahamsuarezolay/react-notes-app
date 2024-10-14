@@ -7,22 +7,7 @@ import Header from "./components/Header";
 
 const App = () => {
   
-  const [notes, setNotes] = useState([{
-    id: nanoid(),
-    text: "This is my first note!",
-    date: "17/02/2023"
-  },
-  {
-    id: nanoid(),
-    text: "This is my second note!",
-    date: "17/02/2023"
-  },
-  {
-    id: nanoid(),
-    text: "This is my third note!",
-    date: "17/02/2023"
-  }
-]); 
+  const [notes, setNotes] = useState([]); 
 
 
 const [searchText, setSearchText] = useState("");

@@ -59,6 +59,7 @@ textarea:focus{
 
 .save:hover{
   background-color: rgba(255, 254, 254, 0.671);
+  cursor: pointer;
 }
 
 .toggle{
@@ -71,11 +72,11 @@ textarea:focus{
 
 .toggle:hover{
   background-color: rgba(204, 204, 204, 0.700);
+  cursor: pointer;
 }
 
 .note{
   background-color: rgb(150, 228, 150);
-
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
@@ -89,6 +90,7 @@ textarea:focus{
 
 .delete-icon:hover{
   animation: shake 0.15s 3;
+  cursor: pointer;
 }
 
 @keyframes shake{
